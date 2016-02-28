@@ -2,11 +2,10 @@
 interface Board{
 	
 	void startGame();
-	
 
 	void printBoard();
 	
-	void showPossibleMoves();
+	int[][] showPossibleMoves();
 	
 	void makeMove(int row, int col);
 	

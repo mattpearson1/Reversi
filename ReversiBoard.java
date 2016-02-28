@@ -17,6 +17,7 @@ public class ReversiBoard implements Board {
 		board [3][4] = 2;
 		board [4][3] = 2;
 		
+		turnVariable = 1;
 	}
 	
 	public void printBoard(){
@@ -41,7 +42,7 @@ public class ReversiBoard implements Board {
 		}
 	}
 	
-	public void showPossibleMoves(){
+	public int[][] showPossibleMoves(){
 		if(turnVariable == 1)
 			oppositeVariable = 2;
 		if(turnVariable == 2)
@@ -294,6 +295,7 @@ public class ReversiBoard implements Board {
 				}
 			}
 		}
+		return possibleMove;
 	}
 
 	public void makeMove(int row, int col) {
