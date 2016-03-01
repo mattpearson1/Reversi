@@ -243,52 +243,104 @@ public class ReversiBoard implements Board {
 		}
 		for(int a = 0; a < 8; a++){
 			for(int b = 0; b < 8; b++){
+<<<<<<< HEAD
 				switch(direction[a][b]){
 				case 1: //below
 					for(int n = a; n < 8; n++){
 						if(board[n][b] == turnVariable)
+=======
+				boolean seenZero = false;
+				switch(direction[a][b]){
+				case 1: //below
+					for(int n = a; n < 8; n++){
+						if(board[n][b] == 0)
+							seenZero = true;
+						if(board[n][b] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 						}
 					break;
 				case 2: //below right
 					for(int n = a, m = b; n < 8 && m < 8; n++, m++){
+<<<<<<< HEAD
 						if(board[n][m] == turnVariable)
+=======
+						if(board[n][m] == 0)
+							seenZero = true;
+						if(board[n][m] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 					}
 					break;
 				case 3: //right
 					for(int n = b; n < 8; n++){
+<<<<<<< HEAD
 						if(board[a][n] == turnVariable)
+=======
+						if(board[a][n] == 0)
+							seenZero = true;
+						if(board[a][n] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 						}
 					break;
 				case 4: //left
 					for(int n = b; n > 0; n--){
+<<<<<<< HEAD
 						if(board[a][n] == turnVariable)
+=======
+						if(board[a][n] == 0)
+							seenZero = true;
+						if(board[a][n] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 						}
 					break;
 				case 5: //below left
 					for(int n = a, m = b; n < 8 && m > 0; n++, m--){
+<<<<<<< HEAD
 						if(board[n][m] == turnVariable)
+=======
+						if(board[n][m] == 0)
+							seenZero = true;
+						if(board[n][m] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 					}
 					break;
 				case 6: //above
 					for(int n = a; n > 0; n--){
+<<<<<<< HEAD
 						if(board[n][b] == turnVariable)
+=======
+						if(board[n][b] == 0)
+							seenZero = true;
+						if(board[n][b] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 						}
 					break;
 				case 7: //above left
 					for(int n = a, m = b; n > 0 && m > 0; n--, m--){
+<<<<<<< HEAD
 						if(board[n][m] == turnVariable)
+=======
+						if(board[n][m] == 0)
+							seenZero = true;
+						if(board[n][m] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 					}
 					break;
 				case 8: //above right
 					for(int n = a, m = b; n > 0 && m < 8; n--, m++){
+<<<<<<< HEAD
 						if(board[n][m] == turnVariable)
+=======
+						if(board[n][m] == 0)
+							seenZero = true;
+						if(board[n][m] == turnVariable && !seenZero)
+>>>>>>> refs/remotes/origin/Source
 							possibleMove[a][b] = 1;
 					}
 					break;
